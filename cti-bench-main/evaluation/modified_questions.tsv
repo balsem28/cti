@@ -1,0 +1,575 @@
+Question	GT
+Which of the following mitigations involves preventing applications from running that haven't been downloaded from legitimate repositories?	C
+Which data source is recommended for monitoring commands that may circumvent mechanisms designed to control elevation of privileges?	A
+What does mitigation ID M1028 suggest to prevent privilege escalation exploits on a system?	C
+Which process creation is an indicator of potential SYSTEM privilege escalation according to the detection section?	C
+"In a Linux environment, what is recommended to monitor for detecting privilege escalation via sudo?"	D
+What mitigation ID suggests requiring a password every time sudo is executed to manage privileged accounts?	A
+"An adversary leveraging the technique ""Abuse Elevation Control Mechanism: Setuid and Setgid"" is targeting which systems from the MITRE ATT&CK Enterprise matrix?"	D
+Which of the following commands would an adversary use to find files with the setgid bit set on a UNIX-based system?	A
+Which mitigation strategy from the MITRE ATT&CK framework is recommended to counteract the abuse of setuid and setgid bits?	B
+Which data source should you monitor to detect changes indicating abuse of setuid or setgid bits on files?	D
+"Which mitigation technique, designated as M1026 under MITRE ATT&CK, should be implemented to limit permissions for users and user groups in creating tokens?"	D
+"Considering MITRE ATT&CK (Enterprise), which tool is known for its ability to create tokens from known credentials as part of its procedures?"	D
+"According to MITRE ATT&CK, which tool did the Night Dragon adversaries use for cracking password hashes?"	C
+Which specific data source should be monitored to detect failed authentication attempts that could indicate a brute force attack?	C
+What mitigation strategy does MITRE ATT&CK suggest to defend against password cracking by adversaries?	C
+How does T1110.001 (Brute Force: Password Guessing) typically try to achieve credential access?	B
+Why are LDAP and Kerberos connection attempts less likely to trigger events compared to SMB?	B
+Which mitigation can help prevent T1110.001 attacks but might cause a denial of service if too strict?	B
+Which tool allows brute-forcing across an entire network as part of T1110.001?	C
+In which scenario might an adversary combine brute forcing activity with External Remote Services?	C
+Which group used a script to attempt RPC authentication during the 2016 Ukraine Electric Power Attack?	B
+"According to the MITRE ATT&CK framework, which technique ID corresponds to Brute Force?"	A
+Which procedure example includes the use of Ncrack to reveal credentials?	A
+What mitigation strategy involves setting account lockout policies after a certain number of failed login attempts?	D
+Which permission is typically required to execute browser-based pivoting behaviors in the context of T1185?	C
+Which mitigation could help restrict exposure to browser pivoting techniques like T1185?	A
+"In the context of MITRE ATT&CK technique T1217 (Browser Information Discovery), which of the following threat actors has specifically used type ""\\c$\Users\\Favorites\Links\Bookmarks bar\Imported From IE*citrix* for bookmark discovery?"	A
+"Which MITRE ATT&CK technique number and name corresponds with adversaries retrieving browser history as seen with DarkWatchman, Dtrack, and Lizar?"	A
+Security professionals monitoring for T1217 should focus on which data sources to detect potential browser information discovery activities?	A
+What type of specific data example stored in `%APPDATA%/Google/Chrome` might signal an instance of T1217 - Browser Information Discovery?	D
+"In the context of MITRE ATT&CK (Platform: None), how can adversaries use browser extensions to maintain persistence on a victim's system?"	D
+Which mitigation technique can help prevent the installation of unauthorized browser extensions as per the MITRE ATT&CK framework?	B
+What is a key recommendation for maintaining security related to browser extensions according to MITRE ATT&CK?	B
+"According to the MITRE ATT&CK framework, how did macOS 11+ change the installation method for browser extensions compared to earlier versions?"	B
+Which mitigation control is detailed in the document to prevent adversarial modifications to StartupItems?	C
+Which data source is suggested to monitor for unexpected modifications in the /Library/StartupItems folder?	D
+Which adversary technique involves modifying startup scripts on Unix-like systems to establish persistence?	C
+Which group has been known to add an entry to the rc.common file for persistence?	C
+What mitigation strategy is recommended to prevent unauthorized editing of the rc.common file?	C
+Which mitigation is recommended for restricting write access to network logon scripts?	C
+What type of data source should be monitored to detect modifications in Active Directory related to network logon scripts?	D
+What methodology do adversaries use to establish persistence via Login Hook according to MITRE ATT&CK technique T1037.002?	B
+Which of the following is a deprecated method for executing scripts upon user login in macOS 10.11 and later?	B
+"According to MITRE ATT&CK's Detection guidelines for T1037.002, which data source should be monitored to detect changes to the login hook files?"	D
+"Which of the following tools has been known to rely on parent PID spoofing as part of its ""rootkit-like"" functionality?"	B
+Which threat group is known for hijacking legitimate application-specific startup scripts for persistence using technique T1037 (Boot or Logon Initialization Scripts) on the Enterprise platform?	B
+Which mitigation strategy involves ensuring proper permission settings for registry keys to prevent unauthorized modifications to logon scripts on the Enterprise platform?	C
+Monitoring which data source can help detect unauthorized modifications to logon scripts in the Active Directory as part of defending against technique T1037 (Boot or Logon Initialization Scripts)?	D
+Which technique ID refers to adversaries creating cloud instances in unused geographic service regions to evade detection in MITRE ATT&CK?	C
+"In the context of MITRE ATT&CK, which mitigation strategy is recommended to prevent adversaries from utilizing unused cloud regions for Defense Evasion?"	A
+Which tactic does MITRE ATT&CK technique T1550.001 pertain to?	A
+What is the primary purpose of application access tokens as described in T1550.001?	B
+Which OAuth-related action can an adversary perform using a compromised access token in cloud-based email services?	C
+Which mitigation strategy advises the use of token binding to cryptographically secure an application access token?	A
+"According to Detection insights for T1550.001, what activity should be monitored to detect misuse of application access tokens?"	C
+What is the purpose of the Pass the Hash technique (T1550.002) in cyber threat intelligence?	B
+Which of the following groups has used tools such as Mimikatz for lateral movement via captured password hashes according to MITRE ATT&CK?	A
+How does 'Overpass the Hash' differ from 'Pass the Hash'?	B
+What Windows Security event ID may indicate the use of Pass the Hash for lateral movement between workstations?	B
+Which mitigation strategy could help prevent the effectiveness of Pass the Hash attacks?	C
+Which tool is capable of performing Pass the Hash on x64 versions of compromised machines according to MITRE ATT&CK?	C
+Under which scenario can a Silver Ticket be utilized based on MITRE ATT&CK T1550.003?	A
+"According to MITRE ATT&CK T1550.003, what specific method does Mimikatz use to extract the krbtgt account hash?"	D
+Which mitigation measure can reset the KRBTGT account password twice to invalidate existing golden tickets?	B
+"Which event ID can help detect the misuse of an invalidated golden ticket, according to MITRE ATT&CK T1550.003?"	A
+"Given the MITRE ATT&CK technique T1550.004, which mitigation strategy can be employed to reduce the risk of session cookie misuse?"	D
+"During the SolarWinds Compromise, which threat actor is associated with using stolen cookies to bypass multi-factor authentication for cloud resources?"	C
+Which mitigation strategy recommends blocking unknown or unused files in transit by default when a link is being visited?	D
+What detection method involves monitoring newly constructed web-based network connections sent to malicious or suspicious destinations?	B
+What file types are specifically recommended to be blocked in transit as a part of web-based content restriction?	C
+"In the context of MITRE ATT&CK T1204.002, which mitigation strategy involves using specific rules on Windows 10 to prevent execution of potentially malicious executables?"	C
+Which data source can be monitored for detecting file creation events to identify malicious activity under MITRE ATT&CK technique T1204.002?	D
+"In the ATT&CK pattern T1204.002, which cyber threat group has utilized malicious Microsoft Word and PDF attachments sent via spearphishing?"	D
+Which of the following mitigation strategies involves the use of digital signatures to ensure the integrity and publisher of specific image tags?	B
+What is one of the primary strategies adversaries use in the T1204.003 technique to increase the likelihood of users deploying their malicious images?	C
+Which data source would be most effective in detecting the creation of new containers from potentially malicious images?	D
+Which of the following is a mitigation strategy for SID-History Injection according to the MITRE ATT&CK framework?	C
+Which of the following techniques is associated with the ID T1134.005 in the context of MITRE ATT&CK?	B
+"Based on T1078.001 Valid Accounts: Default Accounts, what is a recommended mitigation strategy to protect against the use of default credentials?"	C
+Which technique ID corresponds with adversaries abusing domain accounts?	A
+Which detection method involves monitoring remote desktop logons and comparing them to known/approved originating systems to detect lateral movement?	B
+Which adversary group is known to use legitimate account credentials to move laterally through compromised environments?	A
+Which mitigation involves integrating multi-factor authentication (MFA) as part of organizational policy?	D
+What active event code should be monitored in Windows to track Security Logs for user login behaviors?	B
+Which adversary group leveraged valid accounts to deploy malware by obtaining highly privileged credentials such as domain administrator?	A
+Which of the following threat actors have been known to use local accounts for lateral movement during the SolarWinds Compromise?	A
+APT32 is known to use which type of account for their operations according to the examples?	D
+Which mitigation involves the implementation of LAPS to prevent the reuse of local administrator credentials?	A
+What data source should be monitored to detect multiple accounts logging into the same machine simultaneously?	A
+Which malware is specifically noted to record the user's webcam in macOS according to the technique ID T1125 - Video Capture?	A
+Which data source and component combination is suggested for detecting the technique T1125 - Video Capture?	C
+How does the technique T1125 - Video Capture differ from Screen Capture in terms of execution?	B
+Which malware utilizes a custom video recording capability to monitor operations in the victim's environment?	B
+What is a common method used by adversaries to evade detection in sandbox environments according to T1497?	A
+"Which of the following malware samples is known to perform system checks to determine if the environment is running on VMware, as part of the technique T1497?"	C
+How can adversaries use sleep timers or loops in the context of Virtualization/Sandbox Evasion (T1497)?	C
+"During Operation Spalax, what technique did threat actors use to evade anti-analysis checks?"	B
+Which of the following is a detection source for identifying Virtualization/Sandbox Evasion (T1497) tactics?	C
+What technique ID corresponds to Virtualization/Sandbox Evasion: System Checks?	A
+Which of the following data sources can be monitored to detect commands that may employ virtualization/sandbox evasion techniques?	C
+What behavior might Astaroth (S0373) use to evade virtualized environments?	C
+Which of these malware samples checks the amount of physical memory to determine if it is being executed in a virtual environment?	D
+Which tool did Lazarus Group use during Operation Dream Job for VM/sandbox detection?	D
+Which malware is known to use the speed and frequency of mouse movements to determine if a real user is present on the system?	B
+"In MITRE ATT&CK technique T1497.002, what kind of user activity might adversaries rely on before activating malicious code?"	C
+What data source and component can be monitored to detect actions related to API calls meant for virtualization and sandbox evasion?	C
+Which of the following groups uses a loader that executes the payload only after a specific user action to avoid virtualized environments?	D
+Which technique is commonly referred to as API hammering?	D
+Which procedure example uses NtDelayExecution for pausing execution?	A
+How does EvilBunny identify a sandbox through time-based evasion?	D
+Which of the following employs a 30-minute delay after execution to evade sandbox monitoring tools?	C
+How does Clop avoid sandbox detection?	C
+Which data component should be monitored to detect unexpected deletions of user accounts associated with T1531 (Account Access Removal) under the tactic of Impact?	D
+Which procedure example under T1531 involves adversaries deleting administrator accounts prior to encryption?	C
+"When adversaries use the T1531 technique on Windows platforms, which PowerShell cmdlet might they use?"	B
+"In the context of MITRE ATT&CK Technique T1600.001 for Enterprise, which of the following activities could an adversary manipulate to facilitate decryption of data?"	B
+"Regarding detection for the MITRE ATT&CK Technique T1600.001 (Weaken Encryption: Reduce Key Space) on Enterprise platforms, which method can potentially identify this behavior?"	C
+Adversaries using T1102.001: Web Service: Dead Drop Resolver often utilize popular websites and social media platforms to host C2 information. What is one reason this tactic is effective?	B
+"Which threat group is known to use multiple tech community forums to frequently update dead drop resolvers for their KEYPLUG Windows-version backdoor, according to T1102.001?"	A
+"In the context of technique T1102.001: Web Service: Dead Drop Resolver, which mitigation strategy involves using network signatures to identify and block adversary malware?"	B
+"Given the detection strategy for T1102.001: Web Service: Dead Drop Resolver, which data source focuses on detecting network traffic that does not follow expected protocol standards and traffic flows?"	A
+Which malware is known to use Microsoft's TechNet Web portal for obtaining dead drop resolvers according to T1102.001?	D.
+Which MITRE ATT&CK tactic does Technique ID T1102.002 belong to?	A
+What is a common method used by adversaries for outbound traffic in Technique ID T1102.002?	A
+"In the provided examples, which adversary group uses Google Drive for command and control according to Technique ID T1102.002?"	C
+Which of the following mitigations would be most effective against Technique ID T1102.002?	A
+Which adversary uses RSS feeds among their C2 communication channels as per the examples listed in Technique ID T1102.002?	B
+"In the context of detection for Technique ID T1102.002, what should be monitored to detect anomalous communications?"	D
+Adversaries using the MITRE ATT&CK technique T1102.003 may utilize which of the following methods for C2 communication?	B
+"In the MITRE ATT&CK framework, which technique (ID: T1047) is used by adversaries to abuse Windows Management Instrumentation for command execution?"	B
+"During the 2016 Ukraine Electric Power Attack, how did adversaries employ WMI (ID: T1047)?"	C
+Which of the following ports does WMI use for Remote WMI over WinRM operations?	B
+What mitigation strategy involves using Windows Defender Application Control (WDAC) policy rules to block the execution of wmic.exe on Windows 10 and Windows Server 2016?	B
+Which threat group (ID: G0016) used WMI to steal credentials and execute backdoors at a future time?	D
+"In the LATACH G framework, which group has been attributed to the use of ransomware from a batch file in a network share?"	C
+What is the main focus of the mitigation ID M1022 in the provided text?	B
+"What data source ID should be monitored for unexpected and abnormal accesses to network shares, according to the provided document?"	C
+Which of the following Linux commands can be used by adversaries to gather the current time on a Linux device?	C
+Which of the following tactics does MITRE ATT&CK technique T1124 align with?	A
+Which of the following procedures can specifically determine the System UPTIME?	C
+Which data source can help detect an adversary performing System Time Discovery on a Windows platform?	C
+"For the technique T1124, which command can adversaries use on a macOS system to gather the current time zone information?"	B
+"In the context of MITRE ATT&CK for Enterprise, which of the following adversarial groups has used a custom MBR wiper named BOOTWRECK to initiate a system reboot?"	A
+Which MITRE ATT&CK T1529 adversary behavior example involves a delay before rebooting the system?	C
+For which platform does the MITRE ATT&CK technique T1529 apply and why is it challenging to mitigate with preventive controls?	A
+Which technique is identified as T1087 in the MITRE ATT&CK framework?	B
+Which of the following mitigation strategies helps prevent enumerating administrator accounts through UAC elevation?	B
+"During the SolarWinds Compromise, which tool did APT29 use to get a list of users and their roles from an Exchange server?"	B
+Which data source and component should be combined to detect file access operations related to user account listings?	B
+"Under the MITRE ATT&CK framework for Enterprise, which mitigation can help prevent adversaries from creating or interacting with system services using a lower permission level?"	D
+"Regarding MITRE ATT&CK Technique T1569 (System Services), which detection method involves observing for command line invocations of tools capable of modifying services?"	B
+"According to MITRE ATT&CK, which adversary group has been known to create system services to execute cryptocurrency mining software?"	D
+"In the context of MITRE ATT&CK for Enterprise, which command can be used to discover Windows services?"	B
+"Which threat actor is known for using the command net start to discover system services, according to the MITRE ATT&CK pattern for System Service Discovery (T1007)?"	A
+"During detection, which of the following API calls should be monitored for System Service Discovery (T1007)?"	B
+Which data source should be monitored to detect the execution of commands that gather system service information for System Service Discovery (T1007)?	C
+Which threat actor has specifically attempted to discover services for third-party EDR products according to the MITRE ATT&CK technique T1007?	B
+"According to MITRE ATT&CK, what might adversaries use System Service Discovery information for in post-exploitation activities (T1007)?"	B
+"Which of the following mitigations aligns with MITRE ATT&CK ID T1216, System Script Proxy Execution, and involves blocking specific signed scripts that are deemed unnecessary in an environment?"	C
+Which command is used on macOS to enumerate user accounts excluding system accounts?	C
+Which utility is commonly used on Linux to identify currently logged in users?	A
+Which technique does the ID T1033 pertain to in the MITRE ATT&CK framework?	C
+"In the context of T1033 on an Enterprise platform, which command can be executed to determine the identity of the current user on a Windows system?"	D
+Which adversary group used the whoami command and WMIEXEC utility to identify usernames on remote machines according to T1033?	B
+Which of the following mitigations is associated with Behavior Prevention on Endpoint in relation to MITRE ATT&CK technique T1216.001 ?â?â?é?ö?â?â?é?ç?â?â?é?? System Script Proxy Execution: PubPrn?	B
+Which data sources are recommended for monitoring the use of PubPrn.vbs according to MITRE ATT&CK technique T1216.001 ?â?â?é?ö?â?â?é?ç?â?â?é?? System Script Proxy Execution: PubPrn?	B
+Which MITRE ATT&CK tactic does the technique T1216.002: System Script Proxy Execution: SyncAppvPublishingServer primarily fall under?	C
+"Which command-line tool is typically associated with the execution of SyncAppvPublishingServer.vbs, as per the MITRE ATT&CK technique T1216.002?"	B
+"In the context of MITRE ATT&CK, which procedure example involved using the command ""net use"" as part of network connections discovery?"	C
+Which cyber threat actor used the MAPMAKER tool to print active TCP connections on a local system according to T1049?	A
+"Under MITRE ATT&CK T1049, which group employed a PowerShell script called RDPConnectionParser for network information from RDP connections?"	A
+"What technique ID and name does MITRE ATT&CK assign to ""System Network Connections Discovery""?"	C
+"Which group used both the ""netstat -ano"" command and the HIGHNOON malware variant for enumerating active RDP sessions?"	C
+"In the detection process for T1049, which data source is NOT specified for monitoring executed commands and arguments?"	D
+Which command can be used on a Windows system to enumerate Wi-Fi network names through the command line?	C
+"On macOS, which command requires an admin username/password to retrieve the password of a known Wi-Fi network?"	D
+Which technique was used by Threat Group-3390 to conduct internal discovery of systems?	B
+"Which of the following groups used the command ""net localgroup administrators"" to enumerate administrative users?"	A
+What type of monitoring would detect the command ?â?â?é?ö?â?â?é?ç?â?é?é?únet user?â?â?é?ö?â?â?é?ç?â?â?é?ÿ being executed in a sequence on a Windows environment?	D
+What mitigation can be used to prevent the enumeration of administrator accounts during UAC elevation?	D
+Which detection mechanism would be appropriate for finding unauthorized access to the /etc/passwd file in a Linux environment?	B
+What registry key does Ryuk query to detect system language?	A
+Which malware attempts to identify Japanese keyboards via the Windows API call GetKeyboardType?	D
+How does SynAck handle the situation when a language match is found during its checks?	C
+Which MITRE ATT&CK Data Source should be monitored to detect system language discovery through API calls?	D
+"During ""Operation Dream Job,"" which region's languages were excluded by malware?"	A
+Which specific API call can be utilized by adversaries to collect the number of processors on a Windows machine (MITRE ATT&CK T1082)?	D
+"What kind of data would adversaries likely gather via authenticated API calls in AWS, GCP, and Azure within an IaaS environment (MITRE ATT&CK T1082)?"	C
+"Which network device command might adversaries use to obtain system information, particularly version details (MITRE ATT&CK T1082)?"	C
+Which detection method could be employed to effectively identify attempts to gather system information via command executions on network devices (MITRE ATT&CK T1082)?	C
+Which tool mentioned in the document can gather detailed system information specifically on Windows systems including OS version and patches (MITRE ATT&CK T1082)?	C
+Which MITRE ATT&CK technique T1552 involves adversaries finding and obtaining insecurely stored credentials?	B
+"In the examples provided, which malware uses NetPass to recover passwords?"	D
+Which mitigation involves actively searching for files containing passwords or credentials to reduce exposure risk?	C
+Which data component specifically involves monitoring command execution to detect potential adversary activity related to finding passwords?	B
+Which mitigation strategy is suggested to store keys on separate cryptographic hardware rather than the local system?	C
+Which MITRE ATT&CK technique involves using trusted third-party relationships to gain initial access to a victim's network?	D
+"Which group, as per the procedure examples, has breached managed service providers to deliver malware to their customers?"	C
+What mitigation technique recommends requiring Multi-factor Authentication (MFA) for delegated administrator accounts to prevent abuse in trusted relationships?	B
+"To detect adversarial activities involving trusted relationships, what should be monitored in application logs based on MITRE's detection guidance?"	B
+"What data source can help detect unauthorized network traffic patterns from a trusted entity, as per the MITRE ATT&CK detection guidance?"	A
+"When considering the MITRE ATT&CK technique T1537: Transfer Data to Cloud Account, which mitigation strategy involves preventing and blocking sensitive data from being shared with external entities?"	A
+"For monitoring anomalous file transfer activity between accounts within the same cloud provider, which data source is most relevant according to the MITRE ATT&CK technique T1537: Transfer Data to Cloud Account?"	C
+The technique T1537: Transfer Data to Cloud Account can be mitigated by configuring appropriate data sharing restrictions. Which of the following mitigation ID and name pairs corresponds to this strategy?	A
+"According to the MITRE ATT&CK technique T1537: Transfer Data to Cloud Account, what application log event name might you monitor for in Microsoft 365 to detect inappropriate data sharing?"	A
+"In the context of MITRE ATT&CK for Enterprise, what is the primary purpose of utilizing 'Trusted Developer Utilities Proxy Execution' (T1127)?"	B
+Which data source is recommended for detecting abnormal uses of developer utilities under MITRE ATT&CK's detection strategy for T1127 on an enterprise platform?	C
+"Under the mitigation tactics for MITRE ATT&CK's T1127 technique, which method is not suggested as a proactive countermeasure?"	D
+"Given the technique T1205 - Traffic Signaling, in which scenario might an adversary use this technique?"	B
+"For the Traffic Signaling technique (T1205), which library can be used to sniff signal packets?"	B
+"When adversaries use Traffic Signaling on embedded devices, which prerequisite condition must be met?"	B
+What method does the malware Chaos use when implementing Traffic Signaling?	B
+Which detection method can help identify hidden command and control traffic following Traffic Signaling (T1205)?	B
+"Based on the MITRE ATT&CK technique T1218.015 for Enterprise, which of the following practices is a recommended mitigation to prevent the abuse of Electron applications?"	B
+"MITRE ATT&CK's technique T1218.015 for Electron applications uses which of the following components to display the web content and execute back-end code, respectively?"	C
+Which of the following mitigations is recommended to prevent the misuse of MMC within an environment?	D
+What data source(s) should be monitored to detect the malicious use of MMC according to MITRE ATT&CK?	D
+Which of the following describes a potential mitigation for T1218.013 (System Binary Proxy Execution: Mavinject) on an Enterprise platform?	B
+Which data source and component can be used to detect malicious usage of mavinject.exe related to T1218.013 on an Enterprise platform?	B
+What primary MITRE ATT&CK tactic corresponds to the ID T1087.002?	C
+Which PowerShell cmdlet mentioned in T1087.002 can be used to enumerate members of Active Directory groups?	D
+What command on MacOS can be used for domain account discovery according to T1087.002?	C
+Which adversary group used built-in net commands to enumerate domain administrator users as per the examples provided?	D
+"Which tool listed in the document can be used to collect information about domain users, including identification of domain admin accounts?"	C
+"In the document, what mitigation ID involves preventing administrator accounts from being enumerated during elevation?"	C
+What is the primary purpose of verclsid.exe according to MITRE ATT&CK Technique T1218.012?	A
+Which of the following mitigations is recommended by MITRE ATT&CK for preventing the misuse of verclsid.exe (T1218.012)?	C
+Which data sources should be monitored to detect the misuse of verclsid.exe as per the MITRE ATT&CK technique T1218.012?	C
+Which function can rundll32.exe use to execute Control Panel Item files through an undocumented shell32.dll function?	A
+During which notable cyberattack was rundll32.exe used to execute a supplied DLL as described in MITRE ATT&CK T1218.011?	B
+"According to MITRE ATT&CK T1218.011, what is a common tactic used by adversaries to obscure malicious code when using rundll32.exe?"	B
+"Which data source and data component are most relevant for detecting rundll32.exe abuses, as mentioned in the detection section of MITRE ATT&CK T1218.011?"	B
+What is the technique ID associated with ?â?â?é?ö?â?â?é?ç?â?é?é?úSystem Binary Proxy Execution: Regsvr32?â?â?é?ö?â?â?é?ç?â?â?é?ÿ?	A
+Which detection method can identify the origin and purpose of the DLL being loaded by regsvr32.exe?	B
+Which mitigation technique involves using Microsoft?â?â?é?ö?â?â?é?ç?â?â?é?ûs EMET (Exploit Protection)?	B
+What command-line argument does the Analytic 2 detection method look for in regsvr32.exe process creation events?	A
+Which mitigation strategy mentioned is most specific to preventing misuse of Regsvcs.exe and Regasm.exe in T1218.009 for Defense Evasion?	A
+Which cyber threat group has been documented using odbcconf.exe for executing malicious DLL files?	B
+What is one mitigation strategy recommended for countering the threat posed by the misuse of odbcconf.exe?	C
+Which procedure uses msiexec.exe to disable security tools on the system?	C
+Which mitigation strategy aims to prevent elevated execution of Windows Installer packages by disabling the AlwaysInstallElevated policy?	D
+Which data component would be most helpful in determining the origin and purpose of MSI files or DLLs executed using msiexec.exe?	A
+In what scenario might msiexec.exe execution be elevated to SYSTEM privileges?	C
+"Under the MITRE ATT&CK framework, which MITRE ID corresponds to 'System Binary Proxy Execution: Mshta'?"	B
+What mitigation technique suggests blocking the execution of mshta.exe if it?â?â?é?ö?â?â?é?ç?â?â?é?ûs not necessary for the environment?	B
+Why might mshta.exe be considered a threat in terms of Defense Evasion?	C
+Which data source ID would you use to monitor the execution and arguments of mshta.exe?	C
+"Which of the following groups has used InstallUtil.exe to disable Windows Defender, according to the provided document?"	B
+"According to the document, what mitigation technique (ID and Name) is suggested to prevent potential misuse of InstallUtil.exe by blocking its execution if not required for a given system or network?"	B
+"For monitoring the use of InstallUtil.exe, which data source and component are specified to detect anomalous activity through examining recent invocations and their arguments?"	B
+Which group used CMSTP.exe to bypass AppLocker and launch a malicious script as specified in MITRE ATT&CK technique T1218.003?	C
+What legitimate use does CMSTP.exe have according to its description in MITRE ATT&CK technique T1218.003?	C
+What is a recommended mitigation for preventing the misuse of CMSTP.exe as indicated in MITRE ATT&CK technique T1218.003?	C
+"According to MITRE ATT&CK, what Event ID is particularly useful for detecting the abuse of CMSTP.exe through PowerShell script blocks?"	A
+What adversary technique involves abusing control.exe for defense evasion?	D
+How can Control Panel items be executed according to MITRE ATT&CK T1218.002?	C
+Which mitigation strategy suggested for T1218.002 involves blocking potentially malicious .cpl files?	C
+Which of the following is NOT a data source mentioned for detecting T1218.002 activity?	A
+"According to the MITRE ATT&CK framework, which registry keys can be used to inventory Control Panel items?"	D
+Which example from MITRE ATT&CK utilizes Control Panel files (CPL) delivered via email?	C
+"In the context of MITRE ATT&CK for Enterprise, which of the following tools can use PowerShell to discover email accounts as per T1087.003 Account Discovery: Email Account?"	A
+Which technique can be used in Google Workspace to enable Microsoft Outlook users to access the Global Address List (GAL) according to T1087.003 Account Discovery: Email Account?	B
+What is the primary tactic behind the use of Compiled HTML File according to MITRE ATT&CK (ID: T1218.001)?	D
+Which adversary group is known to have leveraged Compiled HTML files to download and run an executable?	A
+One method to detect the use of malicious CHM files is to monitor which of the following data components?	B
+Which mitigation strategy can help prevent the execution of malicious CHM files?	C
+"In the context of MITRE ATT&CK?â?â?é?ö?â?â?é?ç?â?â?é?ûs Defense Evasion tactic, which MITRE ID corresponds to the technique ?â?â?é?ö?â?â?é?ç?â?é?é?úSystem Binary Proxy Execution?â?â?é?ö?â?â?é?ç?â?â?é?ÿ?"	C
+Which mitigation technique involves using Microsoft's EMET Attack Surface Reduction feature to block methods of using trusted binaries to bypass application control?	C
+One mitigation strategy involves restricting execution of vulnerable binaries to privileged accounts. What is the MITRE ID for this mitigation?	B
+Adversaries using MITRE ATT&CK technique T1195: Supply Chain Compromise on which platform would focus on compromising which of the following?	A
+Which of the following mitigations is most directly related to securing the boot process in the context of MITRE ATT&CK technique T1195 on the Enterprise platform?	C
+"For detecting supply chain compromises through MITRE ATT&CK technique T1195, which data source would be critical in verifying the integrity of distributed binaries?"	B
+What specific mitigation strategy does M1033: Limit Software Installation recommend to protect against MITRE ATT&CK T1195: Supply Chain Compromise?	C
+Which MITRE ATT&CK mitigation involves locking software dependencies to specific versions?	A
+What is a recommended mitigation strategy for supply chain compromise according to MITRE ATT&CK?	C
+"In the SolarWinds Compromise, which malware was designed to insert SUNBURST into software builds of the SolarWinds Orion product?"	A
+"In the context of MITRE ATT&CK's Initial Access tactic, what detection method can be used for identifying potential hardware supply chain compromise (T1195.003)?"	B
+Which mitigation strategy is recommended to secure against the hardware supply chain compromise described in T1195.003?	D
+Adversaries may modify code signing policies in which of the following ways according to MITRE ATT&CK Technique ID T1553.006?	D
+Which of the following platform-specific commands is used to disable signing policy enforcement on macOS as per MITRE ATT&CK Technique T1553.006?	A
+"Based on MITRE ATT&CK Technique T1553.006, what kind of artifacts might be visible to the user if code signing policy is modified?"	A
+Which adversarial group has used malware to turn off the RequireSigned feature on Windows according to MITRE ATT&CK Technique T1553.006?	D
+"In the context of MITRE ATT&CK Technique T1553.006, what mitigation strategy involves using Secure Boot to prevent modifications to code signing policies?"	A
+What mitigation strategy involves blocking or unregistering container file types such as .iso and .vhd at web and email gateways?	D
+Which data sources should be monitored for detecting potential bypasses of the Mark-of-the-Web (MOTW) controls?	D
+Which MITRE ATT&CK technique involves installing a root certificate to subvert trust controls?	B
+What is a possible method for detecting root certificate installation on macOS?	C
+What specific registry key can be monitored to detect root certificate installation on Windows?	B
+Which of the following mitigations help prevent users from installing root certificates into their own certificate stores?	D
+What is the most effective method to mitigate Adversary-in-the-Middle attacks involving fraudulent certificates?	A
+What is the primary function of the Subject Interface Packages (SIPs) according to MITRE ATT&CK technique T1553.003?	B
+"In the context of subverting trust controls described in MITRE ATT&CK technique T1553.003, what role does the `Dll` and `FuncName` Registry values modification play?"	B
+Which mitigation strategy involves enabling application control solutions as specified in MITRE ATT&CK technique T1553.003?	A
+"What event ID in CryptoAPI v2 (CAPI) logging is mentioned in MITRE ATT&CK technique T1553.003 for monitoring failed trust validation, and what additional indication does it provide?"	C
+"In MITRE ATT&CK Enterprise, what command can adversaries use in Azure CLI to discover user accounts within a domain?"	C
+What mitigation strategy is recommended to limit permissions to discover cloud accounts according to MITRE ATT&CK technique T1087.004?	C
+In the context of MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing) on which platforms is code signing primarily used?	A
+Which of the following threats utilized a stolen certificate from AI Squared to sign their samples according to MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing)?	C
+"According to MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing), what tactic is this technique categorized under?"	B
+"Under MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing), which adversary group used certificates from Electrum Technologies GmbH to sign their payloads?"	D
+Which data source is recommended to detect suspicious activity related to MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing)?	A
+"Within MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing), what specific malware family used a legally acquired certificate from Sectigo to appear legitimate?"	A
+Which command can be used to remove the quarantine flag to subvert Gatekeeper?	B
+Which technique has OSX/Shlayer used to bypass Gatekeeper's protection on opening a downloaded file?	B
+"What is one scenario in which the quarantine flag is not set, facilitating Gatekeeper bypass?"	B
+What extended attribute can be manually removed to subvert Gatekeeper checks?	C
+Which file entry indicates an application does not use the quarantine flag under macOS?	A
+What is the primary technique identified by MITRE ATT&CK ID T1553 for Defense Evasion?	B
+Which mitigation strategy is recommended for preventing applications that haven?â?â?é?ö?â?â?é?ç?â?â?é?ût been downloaded through legitimate repositories from running?	B
+Which data source is useful for detecting malicious attempts to modify trust settings through command execution?	C
+"In the context of Subvert Trust Controls, what should be periodically baselined to detect malicious modifications?"	B
+What mitigation technique details the management of root certificates through Windows Group Policy settings?	C
+Which detection method involves examining the removal of the com.apple.quarantine flag by a user on macOS?	B
+Which mitigation strategy specifically aims to ensure that containers are not running as root by default in the context of MITRE ATT&CK's scheduled task/job (T1053.007)?	D
+"Regarding the MITRE ATT&CK technique T1053.006 for Enterprise platforms, what are systemd timers primarily used for by adversaries?"	C
+Which mitigation strategy for MITRE ATT&CK technique T1053.006 involves limiting user access to the 'systemctl' or 'systemd-run' utilities?	C
+"In detecting malicious activities involving systemd timers (T1053.006) on the Enterprise platform, which of the following data sources would you monitor for unexpected modifications?"	B
+"In the context of T1053.005 (Scheduled Task/Job: Scheduled Task), which procedure example involves the use of Windows Task Scheduler to launch ""CaddyWiper""?"	C
+"Regarding T1053.005, which threat actor utilized Windows Task Scheduler to load a .vbe file multiple times a day?"	D
+"Under T1053.005, which described method can be used by adversaries to hide scheduled tasks from tools like schtasks /query?"	D
+"In T1053.005, which mitigation supports configuring scheduled tasks to run under the authenticated account instead of SYSTEM?"	C
+Which detection method for T1053.005 focuses on monitoring newly constructed scheduled jobs by enabling specific event logging services?	A
+"For T1053.005, which data source is used to monitor for the creation of scheduled tasks that do not align with known software or patch cycles?"	D
+Which malware is known for using crontab for persistence if it does not have root privileges in Linux environments according to MITRE ATT&CK?	D
+"According to MITRE ATT&CK, which mitigation involves reviewing changes to the cron schedule, particularly within the /var/log directory for cron execution logs?"	A
+Which threat actor is documented by MITRE ATT&CK to have installed a cron job that downloaded and executed files from the command-and-control (C2) server?	D
+Which group used the sp_addlinkedsrvlogin command during the 2016 Ukraine Electric Power Attack to create a link between a created account and other servers in the network?	C
+Which procedure example is associated with adding created accounts to local admin groups to maintain elevated access?	C
+What action does Mimikatz support that allows it to manipulate the password hash of an account without knowing the clear text value?	A
+Which mitigation suggests configuring access controls and firewalls to limit access to critical systems and domain controllers?	D
+"Which detection method involves monitoring events for changes to account objects and/or permissions on systems and the domain, such as event IDs 4738, 4728, and 4670?"	D
+In which scenario might an adversary perform iterative password updates to bypass security policies and preserve compromised credentials?	A
+"For MITRE ATT&CK technique T1029, some adversaries use which of the following exfiltration techniques alongside Scheduled Transfer to move data out of the network?"	C
+"Which malware example specifically schedules its exfiltration behavior outside local business hours, according to T1029?"	B
+"Regarding MITRE ATT&CK T1029, which technique name corresponds to the ID T1029?"	C
+"According to the MITRE ATT&CK technique T1029, which mitigation strategy is recommended to prevent scheduled data exfiltration activities?"	D
+How can application shims potentially be detected according to the MITRE ATT&CK framework?	A
+What would indicate an application shim has been used to maintain persistence as per the given text?	C
+Which adversary group has used application shims to maintain persistence as mentioned in the text?	C
+Which Windows Registry key is commonly modified to load malicious DLLs for AppInit DLLs on 64-bit systems in Enterprise environments?	B
+What is the primary detection method to identify modifications of AppInit_DLLs registry values?	C
+Which technique ID corresponds to Event Triggered Execution: AppInit DLLs in the MITRE ATT&CK framework?	A
+What mitigation strategy is recommended to prevent adversaries from abusing AppInit DLLs?	D
+Which of the following API calls could be indicative of a registry key modification linked to T1546.009 (Event Triggered Execution: AppCert DLLs) on the Enterprise platform?	A
+Which data source is most appropriate for monitoring DLL loads by processes to detect suspicious activities related to MITRE ATT&CK technique T1546.009 (Event Triggered Execution: AppCert DLLs)?	C
+"To mitigate risks associated with the AppCert DLLs within T1546.009, which application control tool could be employed?"	A
+Which MITRE ATT&CK technique involves using Netsh Helper DLLs to establish persistence?	C
+What is an appropriate detection strategy for monitoring malicious Netsh Helper DLL activities?	C
+"If a security professional needs to identify potentially malicious HKLM\SOFTWARE\Microsoft\Netsh registry key modifications, which data source should they monitor?"	D
+"In the context of MITRE ATT&CK, which data source is most relevant for detecting Event Triggered Execution via LC_LOAD_DYLIB Addition on enterprise platforms?"	D
+Which mitigation strategy involves allowing applications by known hashes to prevent Event Triggered Execution via LC_LOAD_DYLIB Addition?	C
+What action can adversaries take to avoid signature checks after modifying a Mach-O binary to load malicious dylibs?	B
+"In the context of MITRE ATT&CK for Enterprise, which data source would you monitor to detect the execution of malicious content triggered by an interrupt signal as described in T1546.005 Event Triggered Execution: Trap?"	C
+What is a key difficulty in mitigating the events triggered execution trap technique (T1546.005) as specified in the MITRE ATT&CK framework?	B
+Which of the following files is used for configuring a user environment when a bash shell is terminated on a GNU/Linux system?	A
+"For macOS Terminal.app using the default shell as zsh, which file is executed to configure the interactive shell environment?"	D
+What mitigation can be employed to limit adversaries from easily creating user-level persistence by modifying shell configuration scripts?	A
+Which data source should be monitored to detect the creation of new files potentially related to the execution of malicious shell commands?	C
+"In the context of MITRE ATT&CK for Enterprise, which of the following best describes the primary risk associated with T1548.004 (Abuse Elevation Control Mechanism: Elevated Execution with Prompt)?"	C
+Which of the following mitigation techniques is recommended to reduce the risk associated with T1548.004 on macOS?	D
+How can security professionals detect the misuse of the AuthorizationExecuteWithPrivileges API as described in T1548.004?	D
+"Which data source is primarily used to detect the modification of registry keys to achieve persistence, according to MITRE ATT&CK?"	D
+What specific registry keys would you monitor on a Windows system to detect an adversary using Boot or Logon Autostart Execution by adding a program to a startup folder?	C
+"Which example adversary group added a registry key in HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Svchost to maintain persistence using Cobalt Strike, as per the technique T1547.001?"	B
+Which command-line interface utility is highlighted for interacting with registry to achieve persistence?	A
+Which example procedure involves the technique of modifying the Startup folder to ensure malware execution at user logon?	B
+"Which detection technique involves monitoring for the creation of new WMI EventFilter, EventConsumer, and FilterToConsumerBinding events?"	D
+Which of the following MITRE ATT&CK data sources should be monitored to detect changes made to files that enable event-triggered execution via screensaver configuration?	B
+"In the context of T1546.002, which mitigation involves using Group Policy?"	B
+For which procedure example is Gazer known to establish persistence through the system screensaver?	B
+Which registry key setting allows an adversary to disable password requirements when unlocking a screensaver?	D
+Which registry key should you monitor to detect changes in system file associations that could indicate a T1546.001: Event Triggered Execution: Change Default File Association attack?	B
+What specific technique does SILENTTRINITY utilize as part of its UAC bypass process according to T1546.001 for the MITRE ATT&CK Enterprise platform?	C
+What is a recommended data component for monitoring executed commands that could establish persistence by changing file associations (T1546.001) on the MITRE ATT&CK Enterprise platform?	D
+"Which group utilizes the Data Protection API (DPAPI) to encrypt payloads tied to specific user accounts on specific machines, according to the MITRE ATT&CK technique T1480.001?"	A
+"In the context of MITRE ATT&CK technique T1480.001, what can be derived to generate a decryption key for an encrypted payload?"	A
+"Under the MITRE ATT&CK technique T1480.001, which malware can store its final payload in the Registry encrypted with a dynamically generated key based on the drive?â?â?é?ö?â?â?é?ç?â?â?é?ûs serial number?"	D
+"Under the MITRE ATT&CK technique T1480.001, which of the following is true about environmental keying during payload delivery?"	B
+How does monitoring command execution help detect MITRE ATT&CK technique T1480.001 implementations?	A
+"According to MITRE ATT&CK technique T1480.001, environmental keying is distinct from typical Virtualization/Sandbox Evasion because it: Checks for sandbox values and continues if none match Uses network traffic patterns to evade detection Relies on the difficulty of reverse engineering techniques Involves target-specific values for decryption and execution?"	D
+Which tactic does the MITRE ATT&CK technique T1048.003 pertain to?	C
+"Which adversary has routines for exfiltration over SMTP, FTP, and HTTP as per T1048.003 examples?"	A
+"What protocol did the adversary group OilRig use to exfiltrate data separately from its primary C2 channel, according to T1048.003 examples?"	C
+Which mitigation technique involves enforcing proxies and using dedicated servers for services such as DNS?	D
+What data component should be monitored to detect anomalous files that may be exfiltrated over unencrypted protocols?	D.
+In which scenario would adversaries utilize the technique T1048.002 in the context of exfiltration over network protocols?	A
+Which mitigation technique would best prevent data exfiltration over encrypted non-C2 protocols in the enterprise environment?	A
+Which of the following MITRE ATT&CK techniques involves exfiltrating data over a symmetrically encrypted non-command-and-control protocol?	B
+Which detection technique involves monitoring for newly constructed network connections sent or received by untrusted hosts?	C
+"To mitigate exfiltration over a symmetrically encrypted non-C2 protocol, which mitigation strategy advises using network intrusion prevention systems?"	B
+"In context of MITRE ATT&CK T1048.001, programs utilizing the network that do not normally communicate over the network should be monitored under which detection category?"	C
+Which technique does the MITRE ATT&CK pattern T1041 encompass?	A
+"Which malware, according to MITRE ATT&CK T1041, uses HTTP POST requests for exfiltration?"	C
+Which adversary has utilized the Cobalt Strike C2 beacons for data exfiltration?	C
+What is the specific defense suggested in MITRE ATT&CK T1041 to prevent exfiltration over C2 channels by using protocol signatures?	C
+How does BLUELIGHT exfiltrate data according to T1041?	A
+Which mitigative measure involves preventing the creation of new network adapters related to MITRE ATT&CK technique T1011.001 (Exfiltration Over Bluetooth)?	B
+Which malware is associated with creating a hidden folder to copy files from drives to a removable drive?	A
+What is a recommended mitigation technique to prevent exfiltration of sensitive data to USB devices in MITRE ATT&CK Enterprise framework?	C
+Which data source should be monitored for detecting newly executed processes when removable media is mounted?	C
+"In MITRE ATT&CK, which Windows Registry key is manipulated by malware such as BoxCaon to maintain persistence?"	C
+"In the context of MITRE ATT&CK, which SaaS service logs would be most appropriate to review for detecting new webhook configurations?"	C
+Which of the following commands could be indicative of an adversary attempting to create a new webhook configuration in a SaaS service?	B
+"Regarding mitigation strategies for exfiltration via webhooks, which technique is recommended?"	C
+Which data source is critical for monitoring anomalous traffic patterns that may suggest data exfiltration to a webhook?	D
+Which detection technique should be used to identify exfiltration attempts to text storage sites?	C
+"Which MITRE ATT&CK tactic is associated with the technique ""Exfiltration Over Web Service: Exfiltration to Text Storage Sites""?"	D
+Which technique ID and full name is associated with exfiltrating data to cloud storage services according to MITRE ATT&CK?	D
+"Which of the following procedures is associated with the adversary group ""Earth Lusca""?"	A
+How did Cinnamon Tempest exfiltrate captured data according to the provided text?	A
+What mitigation strategy can be employed to prevent unauthorized use of external cloud storage services?	B
+What is the primary advantage for adversaries exfiltrating data to a code repository as described in MITRE ATT&CK T1567.001 (Exfiltration Over Web Service: Exfiltration to Code Repository)?	B
+"According to MITRE ATT&CK T1567.001 (Exfiltration Over Web Service: Exfiltration to Code Repository), which mitigation strategy can be employed to prevent unauthorized use of external services for data exfiltration?"	D
+What type of data source is recommended for detecting command execution that may exfiltrate data to a code repository in MITRE ATT&CK T1567.001 (Exfiltration Over Web Service: Exfiltration to Code Repository)?	C
+Which network traffic examination technique can help detect artifacts of common exploit traffic for T1190 - Exploit Public-Facing Application?	C
+Which type of vulnerabilities are commonly exploited in the technique T1190 - Exploit Public-Facing Application by threat actors like APT28 and APT41?	A
+What is a recommended mitigation strategy for T1190 - Exploit Public-Facing Application to limit the exploited target's access to other system features and processes?	D
+Which of the following vulnerabilities has been used by the Dragonfly group (G0035) to exploit public-facing applications for initial access?	A
+"In the context of T1190 - Exploit Public-Facing Application, what methodology can help in rapidly patching externally exposed applications?"	D
+Which threat actor group has been noted to exploit vulnerabilities such as CVE-2020-5902 for initial access on public-facing applications?	D
+"What strategy might mitigate the impact of browser-based exploitation, according to MITRE ATT&CK?"	C
+Which of the following threat groups exploited the Microsoft Office vulnerability CVE-2017-11882 in their attacks?	A
+Name a mitigation technique recommended to prevent exploitation behavior. Application Whitelisting Exploit Protection Network Segmentation File Integrity Monitoring?	D
+Which data sources should be monitored to detect exploitation attempts according to MITRE ATT&CK?	D
+Which mitigation involves using sandboxing to limit the impact of software exploitation?	A
+What could be an indication of a software exploitation leading to successful compromise according to the detection measures?	C
+"Under the MITRE ATT&CK framework, which group has been known to use CVE-2015-4902 to bypass security features for defense evasion?"	B
+Which mitigation technique recommends using tools like the Enhanced Mitigation Experience Toolkit (EMET) to reduce the risk of software exploitation?	B
+"What data source and component should be monitored for abnormal behavior indicating possible exploitation for defense evasion, according to MITRE ATT&CK?"	C
+What advantage do adversaries gain by exploiting vulnerabilities in public cloud infrastructures of SaaS applications?	C
+What group has leveraged CVE-2021-36934 for privilege escalation according to MITRE ATT&CK?â?â?é?ö?â?â?é?ç?â?â?é?ûs technique T1068?	A
+Which adversary is known to have used Bring Your Own Vulnerable Driver (BYOVD) for privilege escalation?	C
+Which mitigation strategy involves using security applications such as Windows Defender Exploit Guard (WDEG) to mitigate privilege escalation exploits?	C
+"According to MITRE ATT&CK?â?â?é?ö?â?â?é?ç?â?â?é?ûs technique T1068, which of the following detection sources would be relevant for identifying the load of a known vulnerable driver?"	C
+Which of the following adversaries has exploited the CVE-2017-0213 vulnerability?	A
+"According to MITRE ATT&CK?â?â?é?ö?â?â?é?ç?â?â?é?ûs technique T1068, which mitigation strategy emphasizes the importance of updating software to prevent exploitation?"	C
+Which MITRE ATT&CK technique involves adversaries exploiting remote services to gain unauthorized access to internal systems?	B
+"What is a common method adversaries use to determine if a remote system is vulnerable, in the context of T1210?"	B
+Which high-value target category is most likely to be exploited for lateral movement in the technique T1210?	A
+Which of the following vulnerabilities has Flame exploited for lateral movement according to the document?	B
+"In the context of technique T1210, which mitigation strategy is specifically aimed at reducing risks from undiscovered vulnerabilities through the use of sandboxing?"	C
+Which data source is mentioned for detecting software exploits using deep packet inspection in the context of T1210?	B
+Which of the following procedures is associated with the use of BITSAdmin to maintain persistence?	B
+Which mitigation strategy is recommended to limit the default BITS job lifetime in Group Policy or by editing specific Registry values?	A
+Which adversary group has used BITSAdmin to exfiltrate stolen data from a compromised host?	A
+Which data source detects new network activity generated by BITS?	A
+Adversaries leveraging external-facing remote services for initial access or persistence is categorized under which MITRE ATT&CK technique?	A
+"Which group installed a modified Dropbear SSH client as part of their attack strategy in the 2015 Ukraine Electric Power Attack, according to MITRE ATT&CK?"	B
+How did APT41 maintain persistent access to a compromised online billing/payment service?	C
+"In the SolarWinds Compromise, which protocol was enabled over HTTP/HTTPS as a backup persistence mechanism using cscript?"	C
+Which mitigation strategy involves using strong two-factor or multi-factor authentication for remote service accounts?	C
+What data source should be monitored to detect follow-on activities when authentication to an exposed remote service is not required?	B
+During which attack was CaddyWiper deployed to wipe files related to OT capabilities?	B
+Which malware performs an in-depth wipe of the filesystem and attached storage through data overwrite or IOCTLS?	B
+What distinguishes Data Destruction (T1485) from Disk Content Wipe and Disk Structure Wipe?	C
+Which group is known for using tools to delete files and folders from victim's desktops and profiles?	D
+What is a mitigation strategy for Data Destruction (T1485) according to MITRE ATT&CK?	C
+Which of the following data sources is NOT used for detecting data destruction activities such as file deletions?	C
+"In the context of MITRE ATT&CK, which technique ID and name describe the use of encoding systems like ASCII, Unicode, Base64, and MIME for C2 traffic?"	B
+"Given the procedure example for BADNEWS malware, which transformation does it apply to command and control (C2) traffic?"	D
+Which mitigation strategy (ID and name) is recommended to prevent adversaries from successfully encoding their C2 traffic?	D
+"Which of the following techniques might adversaries employ to unlock and gain access to manipulate files before encrypting them, as per the MITRE ATT&CK framework?"	C
+"Which malware has the capability to encrypt Windows devices, Linux devices, and VMware instances according to MITRE ATT&CK?"	B
+Which of these adversary groups has used ransomware to encrypt files using a combination of AES256 and RSA encryption schemes?	C
+"According to MITRE ATT&CK, which detection method is useful for identifying unexpected network shares being accessed?"	D
+Scattered Spider (G1015) is known to interact with which types of cloud resources for data collection according to the provided document?	C
+Which mitigation strategy is described by M1041 (Encrypt Sensitive Information) and what is one of its recommendations?	D
+"In the detection section, DS0010 (Cloud Storage) includes monitoring for unusual queries. What additional method does it suggest for identifying suspicious activity?"	C
+Which of the following actions is an example of how AADInternals (S0677) uses technique T1530 (Data from Cloud Storage)?	A
+"Regarding MITRE ATT&CK technique T1602, which mitigation approach involves separating SNMP traffic from other types of network traffic?"	C
+"For detecting adversaries attempting to exploit T1602 (Data from Configuration Repository), monitoring which data source would be most effective?"	C
+"In the context of MITRE ATT&CK for Enterprise, which advanced persistent threat (APT) group is known to have collected files from various information repositories?"	B
+Which of the following mitigations recommends the use of multi-factor authentication (MFA) to protect critical and sensitive repositories?	B
+Which APT group is associated with the use of a custom .NET tool to collect documents from an organization's internal central database?	B
+"What kind of user accounts should be closely monitored when accessing information repositories, according to the detection recommendations for T1213?"	C
+Under which MITRE ATT&CK Tactic does the technique ID T1005 fall?	A
+Which command interpreter is mentioned as a tool that adversaries might use to gather information from local systems as part of T1005?	A
+Which of the following procedures is known to collect local data from an infected machine as part of T1005?	C
+What type of databases may adversaries search according to T1005?	C
+One of the mitigations states that this kind of attack cannot be easily mitigated. Why?	D
+Which detection method involves monitoring newly constructed network connections to network shares?	D
+"According to MITRE ATT&CK, which specific technique (ID and Name) describes the activity of adversaries searching and collecting data from connected removable media?"	C
+Which data source and data component are crucial for detecting the collection of files from a system's connected removable media according to the provided document?	C
+Which mitigation strategy can restrict access to sensitive data and detect unencrypted sensitive data when dealing with T1025 - Data from Removable Media?	C
+What specific capability does the adversary group Gamaredon Group possess concerning removable media as described in the document?	D
+"Regarding MITRE ATT&CK technique ID T1020.001 ?â?â?é?ö?â?â?é?ç?â?â?é?? Automated Exfiltration: Traffic Duplication, which cloud-based service supports traffic mirroring?"	B
+"In the context of MITRE ATT&CK ID T1020.001, which mitigation ID is focused on ensuring that users do not have permissions to create or modify traffic mirrors in cloud environments?"	B
+"Based on MITRE ATT&CK ID T1020.001 concerning Automated Exfiltration: Traffic Duplication, which data source should be monitored to detect anomalous or extraneous network traffic patterns?"	B
+"In the context of MITRE ATT&CK for Enterprise, which mitigation involves implementing IT disaster recovery plans for taking regular data backups?"	C
+"According to MITRE ATT&CK, which adversary group has been identified with the technique of performing fraudulent transactions to siphon off money incrementally?"	C
+Which MITRE ATT&CK data source would you monitor to detect unexpected deletion of files to manipulate external outcomes or hide activity?	A
+What specific expertise might an adversary need to effectively manipulate data in complex systems?	D
+"In the context of MITRE ATT&CK and ID T1001, which of the following is a method used by adversaries to obfuscate command and control traffic?"	B
+Which attack from the given procedures is known to obfuscate C2 traffic by modifying headers and URL paths?	C
+"In the context of MITRE ATT&CK, which of the following adversaries is known to stage data in password-protected archives prior to exfiltration?"	D
+"Regarding the Data Staged technique (ID: T1074), which mitigation strategy is suggested to detect actions related to file compression or encryption in a staging location?"	B
+"Under the Data Staged technique (ID: T1074), how does Kobalos stage collected data prior to exfiltration?"	C
+"When detecting the Data Staged technique (ID: T1074), which data component of the Command data source should be monitored?"	D
+"In the context of MITRE ATT&CK T1030 (Data Transfer Size Limits), which group's method emphasizes exfiltrating files in chunks smaller than 1MB?"	A
+"Which adversary technique, identified as T1030, involves dividing files if the size is 0x1000000 bytes or more?"	C
+Which attack pattern under T1030 exfiltrates data in compressed chunks if a message is larger than 4096 bytes?	D
+"Under MITRE ATT&CK ID T1030, which threat actor splits encrypted archives containing stolen files into 3MB parts?"	C
+"According to mitigation strategies for T1030, what does M1031 recommend for detecting adversary command and control infrastructure?"	C
+"According to MITRE ATT&CK, which technique ID corresponds to Debugger Evasion?"	C
+"Within MITRE ATT&CK, what API function is commonly utilized by adversaries to check for the presence of a debugger?"	D
+Which of the following procedures demonstrates the use of the CheckRemoteDebuggerPresent function to evade debuggers?	B
+What type of flag does the DarkGate malware check to determine if it is being debugged?	C
+How might adversaries flood debugger logs to evade detection?	A
+Which of the following MITRE ATT&CK tactic categories does the technique T1491 (Defacement) fall under?	C
+"Regarding the detection methods for technique T1491 (Defacement), which data source would you monitor for newly constructed visual content?"	B
+"In which scenario is the command certutil -decode most likely used, according to Technique T1140?"	B
+"If a security professional detects the execution of new processes that could be linked to hiding artifacts, which data source should they particularly monitor according to the detection guidelines for Technique T1140?"	D
+"According to MITRE ATT&CK Technique T1140, which Event ID is relevant for detecting the creation of processes like CertUtil.exe for possible malicious decoding activities?"	A
+"In a Kubernetes environment, what is the primary tactic adversaries might use to access other containers running on the same node?"	C
+What measure can be employed to limit communications with the container service to secure channels?	D
+Which detection source would be most effective to monitor for unexpected modifications in Kubernetes pods that might indicate a container deployment?	C
+How can the use of network segmentation help mitigate threats related to container deployments?	D
+Why is the technique T1587 difficult to mitigate proactively according to the given document?	C
+Which data source can be leveraged to identify additional malware samples and development patterns over time under T1587?	C
+"In MITRE ATT&CK technique T1652 (Device Driver Discovery), which of the following tools could be used by adversaries to enumerate device drivers on a Windows host?"	C
+"According to MITRE ATT&CK technique T1652 (Device Driver Discovery), which data source is recommended for detecting potentially malicious enumeration of device drivers through API calls?"	C
+"Which malware, as per the MITRE ATT&CK technique T1652 (Device Driver Discovery), is known to enumerate device drivers located in the registry at HKLM\Software\WBEM\WDM?"	A
+What kind of exfiltration method does CosmicDuke (S0050) employ according to the MITRE ATT&CK documentation?	C
+Which entity is associated with the automatic exfiltration of data to Dropbox as per MITRE ATT&CK technique T1020 examples?	C
+What is one way to detect the use of automated exfiltration techniques?	A
+"During the Frankenstein campaign (C0001), which tool was used for automatic exfiltration back to the adversary's C2 according to MITRE ATT&CK documentation?"	C
+Which of the following utilities is used by the Scattered Spider group for creating volume shadow copies of virtual domain controller disks?	B
+Which mitigation strategy involves ensuring that only specific accounts can configure and manage backups?	C
+"According to the document, what data component should be monitored to detect command execution related to Direct Volume Access?"	D
+Which mitigation strategy is recommended for securing against T1484 (Domain or Tenant Policy Modification) in an enterprise Active Directory environment?	B
+"To detect potential misuse under the MITRE ATT&CK technique T1484, which of the following logs would be most useful?"	A
+What specific auditing tool is mentioned for identifying GPO permissions abuse opportunities under the MITRE ATT&CK technique T1484?	B
+What command can be used for Domain Trust Discovery specifically with nltest?	B
+Which of the following tools utilizes LDAP queries and nltest /domain_trusts for domain trust discovery as per the MITRE ATT&CK framework?	D
+"Among the attack procedures, which one uses a PowerShell cmdlet Get-AcceptedDomain for domain trust enumeration?"	C
+Which procedure/example specifically mentions using both AdFind and the Nltest utility to enumerate Active Directory trusts?	B
+What is a possible mitigation strategy for Domain Trust Discovery in multi-domain/forest environments?	C
+Which technique involves adversaries targeting a user's web browser for exploitation without targeting the external facing applications directly?	A
+Which APT group used watering hole attacks and zero-day exploits to gain initial access within a specific IP range?	C
+What mitigation technique involves using browser sandboxes to limit the impact of exploitation?	B
+Which data source is used to detect abnormal behaviors of browser processes indicating a potential compromise?	B
+APT19 is noted for compromising which high-profile website to perform a watering hole attack?	C
+Which APT group is noted for employing a profiler called RICECURRY to profile a victim's web browser during a strategic web compromise?	B
+"In the context of MITRE ATT&CK, which adversary technique involves dynamically establishing connections to command and control infrastructure?"	C
+What adversary group is known for re-registering a ClouDNS dynamic DNS subdomain which was previously used by ANDROMEDA?	A
+Which malware can be configured to utilize dynamic DNS for command and control communications?	D
+Which of the following procedures involves using Bitcoin blockchain transaction data for resolving C2 server IP addresses?	A
+"Which MITRE ATT&CK tactic does T1584.007 - Compromise Infrastructure: Serverless, belong to?"	A
+"Within the MITRE ATT&CK framework, which of the following groups has utilized a large-scale botnet targeting Small Office/Home Office (SOHO) network devices?"	C
+Which of the following describes a mitigation difficulty for adversaries using technique T1584.005 (Enterprise) involving botnets?	C
+"Which adversary has compromised legitimate websites to host C2 and malware modules, according to the MITRE ATT&CK technique T1584.004 (Compromise Infrastructure: Server)?"	D
+"In the context of MITRE ATT&CK T1584.004 (Compromise Infrastructure: Server), which group is known for using compromised PRTG servers from other organizations for C2?"	C
+"According to the detection guidance for MITRE ATT&CK T1584.004 (Compromise Infrastructure: Server), what can internet scans reveal when adversaries compromise servers?"	B
+Which MITRE ATT&CK T1584.004 (Compromise Infrastructure: Server) threat actor has compromised websites to serve fake updates via legitimate sites?	A
+"Given the MITRE ATT&CK technique T1584.003 ""Compromise Infrastructure: Virtual Private Server,"" which detection method could reveal adversaries' VPS usage after they have provisioned software for Command and Control purposes?"	A
+"What is a key challenge in mitigating the use of compromised Virtual Private Servers (VPSs) by adversaries for infrastructure purposes, according to the MITRE ATT&CK technique T1584.003?"	C
+"According to the Procedure Examples for MITRE ATT&CK technique T1584.003, which threat group has been reported to use compromised VPS infrastructure from Iranian threat actors?"	C
+Which mitigation strategy is identified for MITRE ATT&CK technique T1584.002 (Compromise Infrastructure: DNS Server)?	B
+What kind of DNS data sources are recommended for detection in T1584.002?	D
+"Which adversary group compromised domains to distribute malware, according to MITRE ATT&CK?â?â?é?ö?â?â?é?ç?â?â?é?ûs T1584.001 technique?"	A
+What Tactic does the MITRE ATT&CK technique T1584.001 fall under?	A
+Why is domain registration hijacking attractive to adversaries?	C
+"During the SolarWinds Compromise, which adversary group used the Compromise Infrastructure: Domains technique for their C2 infrastructure?"	C
+Which mitigation strategy might help in reducing the impact of the Compromise Infrastructure: Domains technique?	C
+Which mitigation strategy focuses on preventing unauthorized command execution within a container by restricting file system changes?	C
+"If an adversary has sufficient permissions, which command can they use to execute commands in a Kubernetes cluster?"	A
+"To restrict user privileges to specific namespaces in Kubernetes, which practice should you avoid?"	A
+"In the context of MITRE ATT&CK Technique T1613 (Container and Resource Discovery) for Enterprise environments, which command was reported to be used by adversary TeamTNT for checking running containers in their operations?"	B
+Which specific mitigation strategy focuses on limiting access to the container environment's APIs to managed and secure channels?	A
+Which adversary tool is known for utilizing the 'masscan' utility to search for additional running containers via kubelets and the kubelet API?	C
+Which technique involves adversaries creating cloud accounts to maintain access to victim systems?	B
+"In the context of creating new cloud accounts, which cloud provider uses the term 'service principals' and 'managed identities'?"	C
+Which group is known for creating global admin accounts in targeted organizations for persistence based on MITRE ATT&CK technique T1136.003?	A
+What is one detection method for identifying unusual new cloud account creation per MITRE ATT&CK technique T1136.003?	D
